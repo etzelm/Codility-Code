@@ -7,7 +7,8 @@ const auto INT_SIZE = sizeof(int)*8;                              //Create const
 
 int solution(int N){
     unique_ptr<string> bin(new string(INT_SIZE, '0'));            //Create string of 0's w/ maximum binary int length
-    auto pos = INT_SIZE-1, max_gap = 0, tmp_gap = 0;              //Create index for last char & holds for comparing calculated gap
+    auto pos = INT_SIZE-1;                                        //Create index for last char
+    auto max_gap = 0, tmp_gap = 0;                                //Holds for comparing calculated gap
 
     while (N > 0 and (N%2 == 0)) {                                //Check for leading zeros in given integer's binary representation
         N /= 2;                                                   //Skip leading zeros to catch certain edge cases, e.g. powers of 2
