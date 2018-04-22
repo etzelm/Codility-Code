@@ -6,7 +6,3 @@ int solution(int X, int Y, int D) {
     long double tmp = ceil((y-x)/d);
     return(tmp);
 }
-
-int main() {
-    std::cout<< solution(10,85,30);
-}
