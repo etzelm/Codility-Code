@@ -1,11 +1,12 @@
 #include <iostream>
 #include <memory>
 #include <string>
+using namespace std;
 
 const auto INT_SIZE = sizeof(int)*8;                                        //Create const to represent maximum length of our string
 
 int solution(int N){
-    std::unique_ptr<std::string> bin(new std::string(INT_SIZE, '0'));       //Create string of 0's w/ maximum binary int length
+    unique_ptr<string> bin(new string(INT_SIZE, '0'));                      //Create string of 0's w/ maximum binary int length
     auto pos = INT_SIZE-1;                                                  //Create index set for last string char
     auto max_gap = 0, tmp_gap = 0;                                          //Create hold variables for comparing calculated gap
 
@@ -27,15 +28,4 @@ int solution(int N){
     }
 
     return max_gap;                                                         //Return the calculated max gap
-}
-
-int main(){
-    int n;
-
-    std::cout << "Enter number to find its largest binary gap: ";
-    std::cin >> n;
-
-    std::cout << "Calculated gap: " << solution(n);
-
-    return 0;
 }
