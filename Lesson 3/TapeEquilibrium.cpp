@@ -4,7 +4,7 @@ using namespace std;
 
 int solution(vector<int> &A) {
     auto sum = 0, leftsum = 0, tmp1=0;                                          //Initialize Sum, Left Sum, Temp
-    long long min1 = 3,000;                                                     //Initialize Return Variable
+    long long min1 = 3000;                                                     //Initialize Return Variable
 
     for (int i=0; i<A.size(); i++) {                                            //Iterate through array O(n)
         sum += A[i];                                                            //Generate Vector A's Sum

@@ -18,10 +18,13 @@ class Solution {
             // True if first time int is added to Set, mark for sticking out
             if (intSet.add(A[iter])) map.put(A[iter], true);
             // Otherwise its the second time seeing int, mark for compliance
-            else map.put(A[iter], false);
+            else {
+                intSet.remove(A[iter]);
+                map.put(A[iter], false);
+            }
         }
         
-        // Iterate over values in Set and use Map to find non-Compliance
+        // Iterate over values in Set and use Map to find non-compliance
         for (int value : intSet) {
             if (map.get(value)) return value;
         }
