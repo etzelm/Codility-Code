@@ -1,6 +1,5 @@
 class Solution {
     public int[] solution(int[] A, int K) {
-        // write your code in Java SE 8
         
         // Check for simple cases where no work is actually needed
         if (A.length <= 1) return A;

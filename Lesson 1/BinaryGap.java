@@ -1,6 +1,5 @@
 class Solution {
     public int solution(int N) {
-        // write your code in Java SE 8
         
         boolean startFlag = false;
         int counter = 0, maxBGSeen = 0;

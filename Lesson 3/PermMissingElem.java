@@ -2,7 +2,6 @@ import java.util.*;
 
 class Solution {
     public int solution(int[] A) {
-        // write your code in Java SE 8
         
         // Use a Set to keep track of the elements in the given array
         Set<Integer> intSet = new HashSet<Integer>();

@@ -3,7 +3,6 @@ import java.util.*;
 class Solution {
     
     public int solution(int[] A) {
-        // write your code in Java SE 8
         
         // Catch simple case before unnecessary work is done
         if (A.length == 1) return A[0];
