@@ -19,7 +19,7 @@ class Solution {
             // Otherwise we need to efficiently propagate the returnArray with the maxValue we have
             // so far by using System.arraycopy to copy the first element we set to maxValue at location
             // zero to location one and then in another single action copy those values into locations 
-            // three and four. This continues efficiently until were done with the necessary work. 
+            // three and four. This continues efficiently until we're done with the necessary work. 
             else {
                 if (returnArray.length > 0) returnArray[0] = maxValue;
                 for (int iter = 1; iter < returnArray.length; iter += iter) {
