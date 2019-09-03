@@ -1,10 +1,17 @@
 class Solution {
     public int solution(int[] A) {
 
+        // Initialize variables to hold the start index of the slice 
+        // with the minimun average, the minimun average of that slice, 
+        // and the average of the current slice we are looking at
         int minLocation = 0;
         double minSlice = (A[0] + A[1]) / 2;
         double currentSlice;
-        
+
+        // This solution has more to do with math than using prefix sums
+        // as you dont need to check slices larger than two or three 
+        // members. This checks all those slices except the last two 
+        // member one to avoid trying to access out of bounds memory
         for (int iter=0; iter<A.length-2; iter++) {
             
             currentSlice = ( (double) (A[iter] + A[iter+1]) ) / 2;
@@ -20,12 +27,14 @@ class Solution {
             }
         }
 
+        // Check the last two member slice
         currentSlice = ( (double) (A[A.length-2] + A[A.length-1]) ) / 2;
         if (currentSlice < minSlice) {
             minSlice = currentSlice;
             minLocation = A.length - 2;
         }
 
+        // Return the starting index of the slice with the minimum average
         return minLocation;
     }
 }
