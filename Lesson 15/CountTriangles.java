@@ -27,6 +27,7 @@ class Solution {
             }
         }
         
+        // Return the count of possible triangles we have build up
         return triangleCount;
         
     }
